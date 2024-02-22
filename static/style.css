@@ -1,0 +1,79 @@
+@font-face{
+    font-family: verminvibes;
+    src: url('VerminVibesV.otf');
+}
+@font-face {
+    font-family: digitalDismay;
+    src: url('DigitalDismay.otf');
+}
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(to bottom right,#367588 20%,#e67070);
+    background-repeat:no-repeat;
+    font: xx-large ;
+    font-size: large;
+}
+h1 {align-items: center;
+    color: #686763;
+    font-family: 'verminvibes';
+    font-size: 270%;
+    padding-top: 0%;
+}
+h2 {padding-bottom: 2%;
+    font-size: 235%;
+    text-shadow:
+    2px 2px 0 #ffffff,
+    -2px -2px  0 #ffffff,
+    2px 2px  0 #ffffff,
+    -2px 2px  0 #ffffff,
+    2px -2px  0 #ffffff,
+    2px -2px  0 #ffffff;
+    color: black;
+    font-family: 'digitalDismay';}
+.headerfont{
+    font-family: 'verminvibes';
+    font-size: 125%;
+}
+.clock-container {
+    background-color: #b8b5b0;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0%;
+    padding-top: 1%;
+    border-radius: 50px;}
+.clock-container:hover{box-shadow:5px 5px 5px #2a4747;}
+.header{background-color: #2a4747;
+    font-family: 'Lucida Sans' ;
+    font-weight: bold;
+    font-size: 300%;
+    color: #686763;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 35px;
+}
+.pad{
+    padding-top: 10%;
+    color: rgb(175, 175, 175);
+}
+.button{background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px 2px 4px;
+    cursor: pointer;
+    font-family: verminvibes;
+    font-size: 150%;
+    border-radius: 50px;
+  }
+.button:hover{background-color: #e67070;
+    box-shadow: 5px 5px 5px #2a4747;
+    }
