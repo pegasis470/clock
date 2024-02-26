@@ -34,7 +34,7 @@ def CCT():
     return current_time
 @app.route('/canada-eastern-time')
 def CET():
-    current_time=datetime.now(pytz.timezone("Canada/Central")).strftime('%d-%m-%Y %I:%M:%S %p')
+    current_time=datetime.now(pytz.timezone("Canada/Eastern")).strftime('%d-%m-%Y %I:%M:%S %p')
     return current_time
 # INIT
 
