@@ -17,7 +17,7 @@ def Canada_central():
 def Canada_eastern():
     return render_template('Canada_eastern.html')
 @app.route('/LONDON')
-def Canada_eastern():
+def london():
     return render_template('london.html')
 
 
