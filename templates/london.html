@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/> 
+        <script>
+            function updateTime() {
+                fetch('/London-time')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('clock').innerText = data;
+                    });
+            }
+            setInterval(updateTime, 1000);
+        </script>
+    <head> 
+        <center>
+            <div class="header";><p class="headerfont">LONDON CITY</p></div>
+        </center>
+        <title>Digital Clock</title>
+    </head>
+    <body>
+        <div class="pad" > </div>
+            <center>
+                <div class="clock-container">
+                    <h1>
+                        DIGITAL CLOCK
+                    </h1>
+                        <h2>
+                            <div id="clock"  class="hidden">dd-mm-yyyy HH:MM:SS p</div>
+                            <div class="loader" id="loader">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                  const loader = document.getElementById("loader");
+                                  const dots = document.querySelectorAll(".dot");
+                                                            
+                                  setInterval(() => {
+                                    const randomColor = getRandomColor();
+                                    dots.forEach(dot => {
+                                      dot.style.backgroundColor = randomColor;
+                                    });
+                                  }, 2000);
+                              
+                                  function getRandomColor() {
+                                    const letters = "0123456789ABCDEF";
+                                    let color = "#";
+                                    for (let i = 0; i < 6; i++) {
+                                      color += letters[Math.floor(Math.random() * 16)];
+                                    }
+                                    return color;
+                                  }
+                                });
+
+                            document.addEventListener("DOMContentLoaded", () => {
+                                // Simulate an API request or any async operation
+                                    setTimeout(() => {
+                                    hideLoader();
+                                    showContent();
+                                }, 2000); // Replace with your actual data loading logic and time
+                            
+                                function hideLoader() {
+                                    const loader = document.getElementById("loader");
+                                    loader.style.display = "none";
+                                }
+                            
+                                function showContent() {
+                                    const content = document.getElementById("clock");
+                                    content.style.display = "block";
+                                }
+                            });
+                            </script>
+                        </h2>
+                        <h2></h2>
+                </div>
+            <a class="button" href="/"> RETURN HOME</a>
+            </center>
+    </body>
+</html>

@@ -16,6 +16,9 @@ def Canada_central():
 @app.route('/canada-eastern')
 def Canada_eastern():
     return render_template('Canada_eastern.html')
+@app.route('/LONDON')
+def Canada_eastern():
+    return render_template('london.html')
 
 
 ## Time API's
@@ -35,6 +38,10 @@ def CCT():
 @app.route('/canada-eastern-time')
 def CET():
     current_time=datetime.now(pytz.timezone("Canada/Eastern")).strftime('%d-%m-%Y %I:%M:%S %p')
+    return current_time
+@app.route('/London-time')
+def BST():
+    current_time=datetime.now(pytz.timezone("Europe/London")).strftime('%d-%m-%Y %I:%M:%S %p')
     return current_time
 # INIT
 
