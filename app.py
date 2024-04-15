@@ -25,7 +25,7 @@ def london():
 
 @app.route('/current_time')
 def current_time():
-    current_time = datetime.now().strftime('%d-%m-%Y %I:%M:%S %p')
+    current_time = datetime.now(pytz.timezone("Asia/Kolkata")).strftime('%d-%m-%Y %I:%M:%S %p')
     return current_time
 @app.route('/NYC-TIME')
 def NYCTIME():
