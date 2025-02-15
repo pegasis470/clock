@@ -4,8 +4,6 @@
         {
             "src": "./app",
             "use": "@vercel/python"
-            "src":"app.py",
-            "use":"@vercel/python"
         }
     ],
     "rewrites": [
